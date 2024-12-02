@@ -1,25 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#4CAF50">
+    <title>Timer de Treino</title>
+    
     <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="/assets/styles/styles.css">
-    <title>Fit-Timer</title>
+    <link rel="stylesheet" href="assets/styles/styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Fit-Timer</h1>
+        <h1>Timer de Treino</h1>
+
+        <!-- Configurações de tempo -->
+        <div class="config">
+            <label for="total-time">Tempo Total (minutos):</label>
+            <input type="number" id="total-time" placeholder="Ex: 30" min="1" value="30">
+            
+            <label for="walk-time">Tempo de Caminhada (minutos):</label>
+            <input type="number" id="walk-time" placeholder="Ex: 3" min="1" value="3">
+            
+            <label for="run-time">Tempo de Corrida (minutos):</label>
+            <input type="number" id="run-time" placeholder="Ex: 3" min="1" value="3">
+        </div>
+
         <div class="timer">
             <p id="timer-display">00:00</p>
         </div>
+        
+        <!-- Barra de progresso -->
+        <div class="progress-bar">
+            <div id="progress-track">
+                <div id="progress-marker"></div>
+            </div>
+        </div>
+
         <div class="controls">
             <button id="start-btn">Iniciar</button>
             <button id="pause-btn" disabled>Pausar</button>
             <button id="reset-btn" disabled>Resetar</button>
         </div>
     </div>
-    <script src="/scripts/script.js"></script>
+    
+    <script src="scripts/script.js"></script>
 </body>
 </html>

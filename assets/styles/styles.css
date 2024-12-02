@@ -49,3 +49,42 @@ h1 {
     background-color: #ccc;
     cursor: not-allowed;
 }
+
+/* Barra de progresso */
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #eee;
+    margin-top: 20px;
+    position: relative;
+}
+
+#progress-track {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#progress-marker {
+    height: 100%;
+    background-color: #4CAF50; /* Verde para o progresso */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%; /* Inicialmente sem progresso */
+}
+
+/* Traços entre os intervalos */
+.interval-markers {
+    position: absolute;
+    top: -5px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.interval-marker {
+    width: 2px;
+    height: 10px;
+    background-color: #333;
+}
